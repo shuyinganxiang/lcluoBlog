@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import './router/interceptor'
 
-import './components'
+import './components' // 自封装组建
+import './static/style/common.css' // 公共样式
 
 Vue.config.productionTip = false
 

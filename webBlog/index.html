@@ -2,11 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>blog</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1246264_1mbc8jkwwh4.css">
   </head>
   <body>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <!-- 动态添加body的类 -->
+    <script>
+
+      window.onload = ()=>{
+        windowSize(document);
+      }
+      // 适配设置body类
+      window.onresize  = function () {
+        windowSize(document);
+      }
+      
+      function windowSize(d) { 
+          var b = d.body
+          var c = b.className || ''
+          var w = (d.documentElement || b).clientWidth
+          // 设置对应区间的宽度类名
+          // col-xs，小于768px，手机 
+          // col-sm，768-992，平板 
+          // col-md，992-1200，pc 
+          // col-lg，1200以上，大pc
+          if(w >= 1660){
+            c = 'col-lg'
+          } else if( w <= 1660 && w > 1200){
+            c = 'col-md'
+          } else if( w <= 1200 && w > 768){
+            c = 'col-sm'
+          } else if( w <= 768 ){
+            c = 'col-xs'
+          }
+          console.log(c)
+          b.className = c
+        }
+    </script>
   </body>
 </html>

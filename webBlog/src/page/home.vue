@@ -3,25 +3,25 @@
     <!-- header -->
     <div class="header">
       <div class='header-in clearfix'>
-        <!-- <h1>LCluo</h1> -->
-        <h1>h1</h1>
+        <h1>LCluo</h1>
         <ul class="header-right">
-          <li class="right-item">Js</li>
+          <li class="right-item" id="home">Js</li>
           <li class="right-item">Life</li>
           <li class="right-item">AboutMe</li>
+          <!-- <i class="iconfont iconfenlei" style="color: #5949B0;" ></i> -->
         </ul>
       </div>
     </div>
-    <div class="content-box">
-      <div class="content clearfix">
-        <div class="blog-box" style="background: pink;">
-          <img src="../static/img/phone-icon.png" alt="">
-        </div>
-        <div class="blog-box" style="background: yellow;">
-          <img src="../static/img/phone-icon.png" alt="">
-        </div>
-        <div class="blog-box" style="background: lightgreen;">
-          <img src="../static/img/phone-icon.png" alt="">
+    <div class="content-box clearfix">
+      <div class="img-box float-left">
+        <p class="img-title">WELCOME TO MY BLOG...</p>
+        <img src="../static/img/homePage.jpg" alt="">
+        <p class="img-txt">lc罗blog,记录记住的，掠过不重要的，剩下的，都珍贵。。。</p>
+      </div>
+      <div class="info float-right">
+        <div class="top-box">
+          <p>hell0 kitty</p>
+          <img class="avatar" src="../static/img/userIcon.jpg" alt="">
         </div>
       </div>
     </div>
@@ -42,6 +42,7 @@ export default {
   },
   mounted () {
     console.log('首页')
+    // console.log($('#home'))
   },
   methods: {
     /**
@@ -54,125 +55,152 @@ export default {
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-.home
-  height: 1200px;
-  .header
-    background: url('../static/img/fairies.gif') repeat-x top center;
+  /* 按需引入变量和方法 */
+  @import '../static/style/variable.styl'
+  body
+    .home
+      height: 1200px;
+      .header
+        background: url('../static/img/fairies.gif') repeat-x top center;
 
-    .header-in
-      padding: 96px 0 36px;
-      width: 80%;
-      margin: 0 auto;
+        .header-in
+          padding: 96px 0 36px;
+          width: 80%;
+          margin: 0 auto;
 
-      h1
-        float: left;
-        height: 44px;
-        line-height: 44px;
-        font-size: 32px;
-        font-family: Microsoft YaHei;
-
-      .header-right
-        float: right;
-        padding-top: 16px;
-
-        li
-          float: left;
-          line-height: 28px;
-          text-align: center;
-          font-weight: 700;
-          color: #21718D;
-          margin-right: 36px;
-
-          &:last-child
-            margin-right: 0;
-
-  .content-box
-    min-height: 800px;
-    background: #edf9fb;
-    padding-top: 50px;
-
-    .content
-      margin: 0 6.4935064935%;
-
-      .blog-box
-        float: left;
-        position: relative;
-        width: 30%;
-        margin-right: 3.3%;
-        border-top: 1px solid #D8DAC9;
-        padding-top: 20px;
-        padding-bottom: 45px;
-
-      .blog-box:nth-child(3n+0)
-        margin-right: 0;
-</style>
-
-<style scoped>
-/* .blog-box {
-        float: left;
-        position: relative;
-        border-top: 1px solid #D8DAC9;
-        padding-top: 20px;
-        padding-bottom: 45px;
-        margin-right: 0;
-      }
-
-      @media screen and (min-width: 30em){
-        .blog-box {
-          border-bottom: 0px;
-          float: left;
-          margin-right: 4.347826087%;
-          width: 47.8260869565%;
-        }
-        .blog-box:nth-child(2n) {
-          margin-right: 0;
-        }
-      }
-
-      @media screen and (min-width: 45em)
-        .blog-box:nth-child(3n+1) {
-          clear: both;
-        }
-
-      @media screen and (min-width: 45em)
-        .blog-box {
-          float: left;
-          margin-right: 3.8461538462%;
-          width: 30.7692307692%;
-        }
-        .blog-box:nth-child(3n) {
-          margin-right: 0;
-        }
-
-      @media screen and (min-width: 45em)
-        .blog-box:nth-child(3n+1) {
-          clear: both;
-        }
-      @media screen and (min-width: 65em)
-        .blog-box {
-          margin-right: 3.8461538462%;
-          width: 30.7692307692%;
-        }
-        .blog-box:nth-child(3n) {
-          margin-right: 0;
-        }
-      @media screen and (min-width: 45em)
-        .blog-box {
-          float: left;
-          margin-right: 3.8461538462%;
-          width: 30.7692307692%;
-        }
-        .blog-box:nth-child(3n) {
-          margin-right: 0;
-        }
-      @media screen and (min-width: 30em)
-        .blog-box {
-            border-bottom: 0px;
+          h1
             float: left;
-            margin-right: 4.347826087%;
-            width: 47.8260869565%;
-        }
-        .blog-box:nth-child(2n) {
-          margin-right: 0;
-        } */
+            height: 44px;
+            line-height: 44px;
+            font-size: 32px;
+            font-family: Microsoft YaHei;
+
+          .header-right
+            float: right;
+            padding-top: 16px;
+
+            li
+              float: left;
+              line-height: 28px;
+              text-align: center;
+              font-weight: 700;
+              color: #21718D;
+              margin-right: 36px;
+
+              &:last-child
+                margin-right: 0;
+
+      .content-box
+        width 80%
+        margin 0 auto
+        min-height: 400px;
+        background: #edf9fb;
+        .img-box
+          width 60%
+          paddimg-top 44px;
+          background #bfa
+          text-align center
+          // flex 上下左右居中
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
+          img
+            border-radius 10px
+          .img-txt
+            text-align left
+            margin 0 auto
+            padding 0 8px
+            box-sizing border-box
+
+      .info
+        width 40%
+        background pink
+        .top-box
+          position relative
+          width 300px
+          height 350px
+          border 1px solid #000
+          padding 40px
+          box-sizing border-box
+          text-align center
+          .avatar
+            width 218px
+            height 218px
+
+    &.col-lg
+      .home
+        .content-box
+          .img-box
+            .img-title
+              font-size 32px
+              line-height 96px
+            img
+              width 560px
+              height 420px
+            .img-txt
+              width 560px
+              font-size 20px
+              line-height 36px
+    &.col-md
+      .home
+        .content-box
+          .img-box
+            .img-title
+              font-size 28px
+              line-height 84px
+            img
+              width 480px
+              height 360px
+            .img-txt
+              width 480px
+              font-size 20px
+              line-height 40px
+    &.col-sm
+      .home
+        .content-box
+          .img-box
+            .img-title
+              font-size 28px
+              line-height 68px
+            img
+              margin-top 0
+              width 400px
+              height 300px
+            .img-txt
+              width 400px
+              font-size 16px
+              line-height 36px
+    &.col-xs
+      .home
+        .content-box
+          width 100%
+          .img-box
+            width 100%
+            .img-title
+              font-size 22px
+              line-height 56px
+            img
+              margin-top 0
+              width 100%
+            .img-txt
+              width 100%
+              fonnt-size 12px
+              line-height 30px
+
+    // .txt
+    //   color $color-text-sub
+    // .content
+    //   margin: 0 6.4935064935%;
+
+    //   .blog-box
+    //     float: left;
+    //     position: relative;
+    //     width: 30%;
+    //     margin-right: 3.3%;
+    //     border-top: 1px solid #D8DAC9;
+    //     padding-top: 20px;
+    //     padding-bottom: 45px;
+
+    //   .blog-box:nth-child(3n+0)
+    //     margin-right: 0;
 </style>
