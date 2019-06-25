@@ -4,6 +4,7 @@
     <div class="header">
       <div class='header-in clearfix'>
         <h1>LCluo</h1>
+        <!-- <h1>h1</h1> -->
         <ul class="header-right">
           <li class="right-item" id="home">Js</li>
           <li class="right-item">Life</li>
@@ -20,8 +21,15 @@
       </div>
       <div class="info float-right">
         <div class="top-box">
-          <p>hell0 kitty</p>
+          <p class="avatar-title">Avatar</p>
           <img class="avatar" src="../static/img/userIcon.jpg" alt="">
+        </div>
+        <div class="hot-list">
+          <ul>
+            <li>vue 的生命周期</li>
+            <li>c3动画的特效</li>
+            <li>小程序的过滤器</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -92,13 +100,13 @@ export default {
 
       .content-box
         width 80%
-        margin 0 auto
+        margin 44px auto
         min-height: 400px;
-        background: #edf9fb;
+        // background: #edf9fb;
         .img-box
           width 60%
           paddimg-top 44px;
-          background #bfa
+          // background #bfa
           text-align center
           // flex 上下左右居中
           // display: flex;
@@ -114,22 +122,44 @@ export default {
 
       .info
         width 40%
-        background pink
+        // background pink
         .top-box
           position relative
           width 300px
           height 350px
-          border 1px solid #000
-          padding 40px
+          padding 82px 40px 20px
           box-sizing border-box
           text-align center
+          .avatar-title
+            position absolute
+            left 50%
+            transform translate(-50%, -50%)
+            width 50%
+            height 44px
+            line-height 44px
+            color #f0f0f0
+            font-weight 700
+            background rgba(0,0,0,.75)
           .avatar
             width 218px
             height 218px
+            border 1px solid #000
+            border-radius 50%
+
+        .hot-list
+          padding 12px 40px
+          ul
+            background #f0f0f0
+            li
+              padding 10px 0
+              line-height 24px
+              font-size 16px
+              font-weight 700
 
     &.col-lg
       .home
         .content-box
+          margin 44px auto
           .img-box
             .img-title
               font-size 32px
@@ -141,9 +171,11 @@ export default {
               width 560px
               font-size 20px
               line-height 36px
+
     &.col-md
       .home
         .content-box
+          margin 44px auto
           .img-box
             .img-title
               font-size 28px
@@ -158,6 +190,7 @@ export default {
     &.col-sm
       .home
         .content-box
+          margin 36px auto
           .img-box
             .img-title
               font-size 28px
@@ -170,9 +203,15 @@ export default {
               width 400px
               font-size 16px
               line-height 36px
+
+        .info
+          // width 100%
+          // .top-box
+          //   margin 0 auto
     &.col-xs
       .home
         .content-box
+          margin 0 auto
           width 100%
           .img-box
             width 100%
@@ -186,6 +225,11 @@ export default {
               width 100%
               fonnt-size 12px
               line-height 30px
+
+        .info
+          width 100%
+          .top-box
+            margin 0 auto
 
     // .txt
     //   color $color-text-sub
