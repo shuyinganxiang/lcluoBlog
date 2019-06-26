@@ -67,9 +67,11 @@ export default {
   @import '../static/style/variable.styl'
   body
     .home
+      background-color: #cacaca;
       height: 1200px;
       .header
         background: url('../static/img/fairies.gif') repeat-x top center;
+        background-color: #fff;
 
         .header-in
           padding: 96px 0 36px;

@@ -5,6 +5,7 @@ Vue.use(Router)
 
 // 首页
 const Home = r => require.ensure([], () => r(require('@/page/home')), 'Login')
+const Lunbo = r => require.ensure([], () => r(require('@/page/lunbo')), 'Login')
 
 export default new Router({
   routes: [
@@ -18,6 +19,14 @@ export default new Router({
       component: Home,
       meta: {
         title: '首页'
+      }
+    },
+    {
+      path: '/lunbo',
+      name: 'lunbo',
+      component: Lunbo,
+      meta: {
+        title: '轮播'
       }
     }
   ]
