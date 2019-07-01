@@ -74,7 +74,7 @@ export default {
         background-color: #fff;
 
         .header-in
-          padding: 96px 0 36px;
+          padding: 84px 0 24px;
           width: 80%;
           margin: 0 auto;
 
@@ -135,6 +135,7 @@ export default {
           .avatar-title
             position absolute
             left 50%
+            bottom 0px
             transform translate(-50%, -50%)
             width 50%
             height 44px
@@ -151,7 +152,7 @@ export default {
         .hot-list
           padding 12px 40px
           ul
-            background #f0f0f0
+            // background #f0f0f0
             li
               padding 10px 0
               line-height 24px
